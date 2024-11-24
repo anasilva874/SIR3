@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="loadloc.js" defer></script>
+    <script type="text/javascript" src="validation.js" defer></script>
+</head>
+<body>
+
+<header>Using CSS to style an HTML Form</header>
+<article>
+<div>
+  <form id="myform" action="#" novalidate>
+    
+    <!-- Informações Pessoais -->
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" placeholder="Your first name" required>
+
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" placeholder="Your last name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+      
+    </fieldset>
+
+    <!-- Endereço -->
+    <fieldset>
+      <legend>Address</legend>
+      <label for="address">Street Address:</label>
+      <input type="text" id="address" name="address" placeholder="Street name and number" required>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" placeholder="City name" required>
+
+      <label for="postalcode">Postal Code:</label>
+      <input type="text" id="postalcode" name="postalcode" placeholder="1234-567" pattern="\d{4}-\d{3}" required>
+
+      <label for="loc">Country:</label>
+      <select id="loc" name="country" required>
+        <option value="">Select your country</option>
+      </select>
+    </fieldset>
+
+    <!-- Detalhes de Pagamento -->
+    <fieldset>
+      <legend>Payment Details</legend>
+
+      <legend>Credit Card Type:</legend>
+    <label>
+        <input type="radio" name="card-type" value="Visa" required> Visa
+    </label>
+    <label>
+        <input type="radio" name="card-type" value="Mastercard" required> Mastercard
+    </label>
+    <label>
+        <input type="radio" name="card-type" value="SAS" required> SAS
+    </label>
+
+      <label for="cardnumber">Card Number:</label>
+      <input type="text" id="cardnumber" name="cardnumber" placeholder="1234567812345678" pattern="\d{13,19}" required>
+
+      <label for="expiry-date">Expiry Date:</label>
+      <input type="date" id="expiry-date" name="expiry-date" required>
+  
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" placeholder="123" pattern="\\d{4}" required>
+    </fieldset>
+
+    <!-- Termos e Condições -->
+    <fieldset>
+      <legend>Terms and Conditions</legend>
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms">I agree to the terms and conditions</label>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</article>
+<footer>ana silva 2024</footer>
+</body>
+</html>
